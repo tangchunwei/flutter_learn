@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/text.dart';
+import 'widgets/click.dart';
 
 main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: const Text("我是淡定"), centerTitle: true, elevation: 100.0),
-      body: const TextDemo(),
+      body: const ClickDemo(),
     );
   }
 }
