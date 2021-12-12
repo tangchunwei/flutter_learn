@@ -5,6 +5,6 @@ class TextDemo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('测试');
+    return const Text('测试');
   }
 }

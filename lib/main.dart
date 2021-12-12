@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'widgets/text.dart';
+
 main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +21,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: const Text("我是淡定"), centerTitle: true, elevation: 100.0),
+      body: const TextDemo(),
     );
   }
 }
