@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'widgets/text.dart';
+import 'package:flutter_learn/widgets/navigator.dart';
 
 main() {
   runApp(const MyApp());
@@ -10,18 +9,24 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: HomePage());
-  }
-}
+    return MaterialApp(
+      routes: {
+        "/": (context) => const LoginPage(),
+      },
+      onGenerateRoute: (RouteSettings s) {
+        print(s.name);
+        switch (s.name) {
+          case "menu":
+            return MaterialPageRoute(
+                builder: (context) {
+                  return const MenuPage();
+                },
+                settings: s);
+            break;
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-          title: const Text("我是淡定"), centerTitle: true, elevation: 100.0),
-      body: const TextDemo(),
+          default:
+        }
+      },
     );
   }
 }
